@@ -1,6 +1,30 @@
 <link rel="stylesheet" href="/stylesheets/contact.css" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script type="module" src="/scripts/db.js"></script>
 <body>
+    <script src= "https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
     <h1>{{title}}</h1> 
-<!-- Contact form code is provided from Formspree, site used to host the contact form -->
+    <container>
+        <form action="" id="contactForm">
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Name..." />
+            </div>
+
+            <div class="inputBox">
+                <input type="email" id="email" placeholder="example@email.com" />
+            </div>
+
+            <div class="inputBox">
+                <input type="tel" id="phone"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="111-111-1111" />
+            </div>
+            <div class="inputBox">
+                <textarea id="msg" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </container> 
+
 </body>
