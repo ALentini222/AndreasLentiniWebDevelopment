@@ -1,5 +1,5 @@
 
-  const firebaseConfig = {
+const firebaseConfig = {
 
     apiKey: "AIzaSyArZf9GS9LWElhOMhA9FYlOlIpPF8GZk7Q",
 
@@ -33,18 +33,15 @@
   var phone =  document.getElementById('phone').value;
   var email =  document.getElementById('email').value;
   var msg =  document.getElementById("msg").value;
-  
   saveMessage(name, phone, email, msg);
   document.getElementById('contactForm').reset();
   }
-  
   // Save message to firebase
-  function saveMessage(name, phone, email, msg) {
+  function saveMessage(name, phone, email) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
    name: name,
    phone: phone,
    email: email,
-   msg: msg,
   });
   }

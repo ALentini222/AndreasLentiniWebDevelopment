@@ -3,7 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const nodemailer = require("nodemailer");
+const Mailgen = require('mailgen');
 const port = 3000;
+require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -11,7 +14,6 @@ var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
 var projectsRouter = require('./routes/projects');
 var privacyRouter = require("./routes/privacy");
-
 var app = express();
 
 // view engine setup
@@ -23,6 +25,37 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.post('/contact',(req, res)=>{
+  console.log("hello world");
+  let config = {
+      service: 'gmail', // your email domain
+      auth: {
+          user: process.env.NODEJS_GMAIL_APP_USER,   // your email address
+          pass: process.env.NODEJS_GMAIL_APP_PASSWORD // your password
+      }
+  }
+  let transporter = nodemailer.createTransport(config);
+
+  let message = {
+      from: 'lentiniandy+contact@gmail.com', // sender address
+      to: req.body.email, // list of receivers
+      subject: 'Contact Form Confirmation', // Subject line
+      html: "<b>Hello world?</b>" // html body
+  };
+
+  transporter.sendMail(message).then((info) => {
+      return res.status(201).json(
+          {
+              msg: "Email sent",
+              info: info.messageId,
+              preview: nodemailer.getTestMessageUrl(info)
+          }
+      )
+  }).catch((err) => {
+      return res.status(500).json({ msg: err });
+  }
+  );
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -48,5 +81,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
