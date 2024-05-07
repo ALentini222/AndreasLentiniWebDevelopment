@@ -210,7 +210,7 @@ button a {
 .about-to-contact:hover{
     background-color: var(--primary);
 }
-#contact{
+#contact,#about,#aboutMe{
     background-image: url("/images/background.png");
     height: 75%;
     background-position: center;
@@ -288,6 +288,9 @@ button[type=submit]:hover {
 }
 
 .personal-image img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
+}
+#overview{
+    background-color: var(--primary-dark);
 }
