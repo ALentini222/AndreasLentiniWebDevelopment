@@ -1,3 +1,31 @@
+:root {
+    --primary: #ffa500;
+    --primary-content: #1F1F1F;
+    --primary-dark: #cc8400;
+    --primary-light: #ffb733;
+
+    --secondary: #6e00ff;
+    --secondary-content: #ffffff;
+    --secondary-dark: #5800cc;
+    --secondary-light: #8b33ff;
+
+    --background: #1b1a18;
+    --foreground: #404040;
+    --border: #45413b;
+
+    --copy: #fbfbfb;
+    --copy-light: #dcdad6;
+    --copy-lighter: #aca89f;
+
+    --success: #00ff00;
+    --warning: #ffff00;
+    --error: #ff0000;
+    --success-content: #000000;
+    --warning-content: #000000;
+    --error-content: #ffffff;
+}
+
+
 html {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -6,7 +34,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #404040 ;
+    background-color: var(--primary) ;
 }
 nav li{
     float: left;
@@ -15,6 +43,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--primary-content);
 }
 nav li a {
     display: block;
@@ -25,15 +54,15 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: orange;
+    background-color: var(--primary);
 }
 header{
     position:fixed;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #404040;
-    color: #404040;
+    background-color: var(--primary);
+    color: var(--primary);
     text-align: center;
 }
 article {
@@ -44,7 +73,7 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: var(--primary-content);
     color: white;
     text-align: center;
 }
@@ -54,7 +83,7 @@ footer ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: orange ;
+    background-color: var(--primary-content) ;
 }
 footer li{
     float: left;
@@ -69,48 +98,48 @@ footer li a {
 }
 
 footer li a:hover {
-    background-color: #404040;
+    background-color: var(--primary);
 }
 
 p a {
     text-decoration: none;
-    background-color: #404040;
+    background-color: var(--primary-content);
     color: white;
     padding: 2px 6px 2px 6px;
     border-top: 1px solid white;
-    border-right: 1px solid #404040;
-    border-bottom: 1px solid #404040;
+    border-right: 1px solid var(--primary-content);
+    border-bottom: 1px solid var(--primary-content);
     border-left: 1px solid white;
 }
 p a:hover{
-    background-color: orange;
+    background-color: var(--primary);
 }
 
-div a {
+.navbar a {
     text-decoration: none;
-    background-color: #404040;
+    background-color: var(--primary);
     color: white;
     padding: 2px 6px 2px 6px;
 }
 button a {
     text-decoration: none;
-    background-color: #404040;
+    background-color: var(--primary);
     color: white;
     padding: 2px 6px 2px 6px;
     float:right;
 }
-div a:hover{
-    background-color: orange;
+.navbar a:hover{
+    background-color: var(--primary-content);
 }
 .navbar {
     overflow: hidden;
-    background-color: #404040;
+    background-color: var(--primary);
   }
   
   .navbar a {
     float: left;
     font-size: 16px;
-    color: #404040;
+    color: var(--primary);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -120,25 +149,33 @@ div a:hover{
     float: left;
     overflow: hidden;
   }
-  
-  .dropdown .dropbtn {
+  .dropbtn{
     font-size: 16px;  
     border: none;
     outline: none;
-    color: orange;
+    color: var(--primary);
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: var(--primary-content);
     background-color: inherit;
     font-family: inherit;
     margin: 0;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: orange;
+  .navbar a:hover, .dropdown:hover .dropbtn:hover {
+    background-color: var(--primary-content);
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #404040;
+    background-color: var(--primary);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -154,9 +191,103 @@ div a:hover{
   }
   
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: var(--secondary-content);;
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
+#about{
+    color: var(--secondary-content);
+}
+#aboutme{
+    background-color: var(--primary-dark);
+    color: var(--foreground);
+}
+.about-to-contact{
+    background-color: var(--primary-content);
+}
+.about-to-contact:hover{
+    background-color: var(--primary);
+}
+#contact{
+    background-image: url("/images/background.png");
+    height: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+  }
+
+  .contact-form-container {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between the form and the other content */
+    max-width: 500px; /* Set maximum width for the form */
+}
+
+/* Adjust the width of the input fields and textarea */
+/* Adjust the width of the input fields and textarea */
+.inputBox input,
+.inputBox textarea {
+    width: 50%;
+}
+h1,h2,h3,h4,h5,p,small{
+    color:var(--secondary-content)
+}
+  input[type=text], input[type=email], input[type=tel]{
+    width: 50%;
+    align-items: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 50%;
+    background-color: var(--primary);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button[type=submit]:hover {
+    background-color:var(--primary-content);
+}
+#legal{
+    color:var(--copy);
+    float:right;
+}
+
+.about-me {
+    display: flex;
+}
+
+.aboutMeInfo {
+    flex: 1;
+    padding: 0 16px;
+}
+
+.personal-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.personal-image img {
+    max-width: 100%;
+    height: auto;
+}

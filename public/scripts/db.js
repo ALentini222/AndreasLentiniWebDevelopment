@@ -37,11 +37,12 @@ const firebaseConfig = {
   document.getElementById('contactForm').reset();
   }
   // Save message to firebase
-  function saveMessage(name, phone, email) {
+  function saveMessage(name, phone, email,msg) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
    name: name,
    phone: phone,
    email: email,
+   message: msg
   });
   }
