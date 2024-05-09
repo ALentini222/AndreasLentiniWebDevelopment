@@ -33,6 +33,7 @@ const firebaseConfig = {
   var phone =  document.getElementById('phone').value;
   var email =  document.getElementById('email').value;
   var msg =  document.getElementById("msg").value;
+  
   saveMessage(name, phone, email, msg);
   document.getElementById('contactForm').reset();
   }
