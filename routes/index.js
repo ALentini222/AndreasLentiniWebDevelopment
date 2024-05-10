@@ -10,8 +10,8 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About Me' });
 });
 
-router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects' });
+router.get('/products', function(req, res, next) {
+  res.render('products', { title: 'Products and Services' });
 });
 
 router.get('/contact', function(req, res, next) {
