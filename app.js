@@ -33,8 +33,6 @@ app.use('/contact', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/privacy', privacyRouter);
 
-app.listen(port, () => console.log(`App listening to port ${port}`));
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
