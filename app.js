@@ -14,6 +14,7 @@ var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
 var productsRouter = require('./routes/products');
 var privacyRouter = require("./routes/privacy");
+
 var app = express();
 
 // view engine setup
@@ -32,6 +33,7 @@ app.use('/products', productsRouter);
 app.use('/contact', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/privacy', privacyRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
