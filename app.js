@@ -13,7 +13,11 @@ var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
 var contactRouter = require('./routes/contact');
 var productsRouter = require('./routes/products');
+var template1Router = require('./routes/template1');
+var template2Router = require('./routes/template2');
+var template3Router = require('./routes/template3');
 var privacyRouter = require("./routes/privacy");
+
 
 var app = express();
 
@@ -33,6 +37,9 @@ app.use('/products', productsRouter);
 app.use('/contact', contactRouter);
 app.use('/about', aboutRouter);
 app.use('/privacy', privacyRouter);
+app.use('/temp1', template1Router);
+app.use('/temp2', template2Router);
+app.use('/temp3', template3Router);
 
 
 // catch 404 and forward to error handler

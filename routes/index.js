@@ -20,5 +20,13 @@ router.get('/contact', function(req, res, next) {
 router.get("/privacy", function(req, res, nxet){
   res.render('privacy', {title: 'Privacy'});
 });
-
+router.get('/temp1', function(req,res,next){
+  res.render('template1', {title: 'Template 1'});
+});
+router.get('/temp2', function(req,res,next){
+  res.render('template2', {title: 'Template 2'});
+});
+router.get('/temp3', function(req,res,next){
+  res.render('template3', {title: 'Template 3'});
+});
 module.exports = router;

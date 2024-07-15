@@ -1,8 +1,8 @@
 :root {
-    --primary: #ffa500;
+    --primary: #da8747;
     --primary-content: #1F1F1F;
-    --primary-dark: #cc8400;
-    --primary-light: #ffb733;
+    --primary-dark: #568CA1;
+    --primary-light: #623b96;
 
     --secondary: #6e00ff;
     --secondary-content: #ffffff;
@@ -54,7 +54,7 @@ body{
 }
 nav li a {
     display: block;
-    color: white;
+    color: var(--primary-content);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -145,7 +145,7 @@ button a {
     text-decoration: none;
   }
   .navbar a:hover, .dropdown:hover .dropbtn:hover {
-    background-color: var(--primary-content);
+    background-color: var(--secondary-content);
     color:var(--primary);
   }
   @media(max-width:768px){
@@ -214,6 +214,7 @@ button a {
 #aboutme{
     background-color: var(--primary-dark);
     color: var(--foreground);
+    padding-bottom:64px;
 }
 .about-to-contact{
     background-color: var(--primary-content);
@@ -296,7 +297,7 @@ h1,h2,h3,h4,h5,p,small{
 
 .aboutMeInfo {
     flex: 1;
-    padding: 0 16px;
+    padding: 64px 16px;
 }
 
 .personal-image {
@@ -322,4 +323,7 @@ select {
     border: 1px solid #444;
     border-radius: 4px;
     box-sizing: border-box;
+}
+#contactForm{
+    padding-bottom:64px;
 }
