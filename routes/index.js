@@ -21,12 +21,12 @@ router.get("/privacy", function(req, res, nxet){
   res.render('privacy', {title: 'Privacy'});
 });
 router.get('/temp1', function(req,res,next){
-  res.render('template1', {title: 'Template 1'});
+  res.render('template1', {title: 'Template 1' ,layout:false});
 });
 router.get('/temp2', function(req,res,next){
-  res.render('template2', {title: 'Template 2'});
+  res.render('template2', {title: 'Template 2',layout:false});
 });
 router.get('/temp3', function(req,res,next){
-  res.render('template3', {title: 'Template 3'});
+  res.render('template3', {title: 'Template 3',layout:false});
 });
 module.exports = router;
