@@ -24,6 +24,17 @@
     --warning-content: #000000;
     --error-content: #ffffff;
   }
+  @media(max-width:768px){
+    .forDesktop{
+       display:none;
+     }
+  }
+
+  @media(min-width:768px){
+    .forMobile{
+       display:none;
+     }
+  }
   @-webkit-keyframes come-in {
     0% {
       -webkit-transform: translatey(100px);
@@ -66,9 +77,6 @@
   }
   html, body {
     background-image: url("/images/background-light.png");
-  
-    min-height: 500px; 
-  
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -534,12 +542,12 @@ button[type=submit]:hover {
   align-items: center;
   color:  var(--copy);
   text-align: center;
+  padding-top:64px;
   position: relative;
 }
 
 .hero-section .hero-content {
-  background-image: url("/images/templateImages/IMG_0982.jpg");
-  color:black;
+  background-color:var(--primary);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -658,4 +666,100 @@ button[type=submit]:hover {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.scrollingWrapper {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevents wrapping of children */
+  max-height: 5096px; /* Adjust height as needed */
+  margin-bottom: 20px; /* Adds some space at the bottom */
+}
+.scrollingContainer {
+  display: inline-block; /* Display in a row */
+  margin: 0 10px; /* Add some space between images */
+}
+.scrollingContainer img, .rightDiv img, .leftDiv img {
+  max-width: 512px; /* Ensure images don't exceed container width */
+  max-height: 512px; /* Maintain aspect ratio */
+}
+.products .leftDivMobile, .products .rightDivMobile {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--secondary-content);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products .leftDiv:hover, .products .rightDiv:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.products .forMobile img{
+  height:auto;
+  width:auto;
+  max-height:auto;
+  max-width:50%;
+  margin: 20px 0;
+}
+.scrollingWrapper {
+  overflow-x: auto;
+  white-space: nowrap; /* Prevents wrapping of children */
+  max-height: 5096px; /* Adjust height as needed */
+  margin-bottom: 20px; /* Adds some space at the bottom */
+}
+.scrollingContainer {
+  display: inline-block; /* Display in a row */
+  margin: 0 10px; /* Add some space between images */
+}
+.scrollingContainer img, .rightDiv img, .leftDiv img {
+  max-width: 512px; /* Ensure images don't exceed container width */
+  max-height: 512px; /* Maintain aspect ratio */
+}
+
+.products .forMobile img,
+.aboutMe .forMobile img{
+  height:auto;
+  width:25%;
+  max-height:auto;
+  max-width:50%;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid var(--border); /* Updated border color */
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease; /* Added transition effect */
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+  border-color: var(--primary); /* Updated focus border color */
+}
+
+/* Button Styles */
+
+button[type=submit] {
+  width: 100%;
+  background-color: var(--primary);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--foreground);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Added transition effect */
+}
+
+button[type=submit]:hover {
+  background-color: var(--primary-dark); /* Updated hover background color */
 }

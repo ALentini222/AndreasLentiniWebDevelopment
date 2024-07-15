@@ -25,6 +25,17 @@
     --error-content: #ffffff;
 }
 
+@media(max-width:768px){
+    .forDesktop{
+       display:none;
+     }
+}
+
+@media(min-width:768px){
+    .forMobile{
+       display:none;
+     }
+}
 
 html {
     font-family: 'Courier New', Courier, monospace;
@@ -148,17 +159,6 @@ button a {
     background-color: var(--secondary-content);
     color:var(--primary);
   }
-  @media(max-width:768px){
-    .forDesktop{
-       display:none;
-     }
-}
-
-@media(min-width:768px){
-    .forMobile{
-       display:none;
-     }
-}
   .dropdown {
     float: left;
     overflow: hidden;
