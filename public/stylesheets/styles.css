@@ -327,3 +327,75 @@ select {
 #contactForm{
     padding-bottom:64px;
 }
+
+.forDesktop .templateButtons {
+    text-align: center; /* Center align the content */
+    display: flex;
+}
+
+.forDesktop .templateDiv {
+    display: inline-block; /* Display as inline block to make them align horizontally */
+    text-align: center; /* Center align content inside each templateDiv */
+    margin: 0 10px; /* Add margin between each templateDiv */
+}
+
+.forDesktop .templateDiv img {
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center align the image */
+    height:auto;
+    width:75%;
+    padding:32px;
+
+}
+
+.forDesktop .productsButton {
+    display: block;
+    width: 70%; /* Ensure the button takes full width */
+    margin-top: 10px;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px; /* Optional: Add padding to improve button appearance */
+    background-color: var(--primary-dark); /* Optional: Add background color */
+    border-radius: 5px; /* Optional: Add border radius */
+    display: inline-block; /* Display as inline block to make them align horizontally */
+    text-align: center; /* Center align content inside each templateDiv */
+    margin: 0 10px; /* Add margin between each templateDiv */
+}
+.forDesktop .productsButton:hover{
+    background-color:#404040;
+}
+
+
+.forMobile .templateButtons {
+    text-align: center; /* Center align the content */
+}
+
+
+
+.forMobile .templateDiv img {
+    display: block; /* Ensure the image is a block element */
+    margin: 0 auto; /* Center align the image */
+    height:auto;
+    width:75%;
+    padding:32px;
+
+}
+
+.forMobile .productsButton {
+    display: block;
+    width: 70%; /* Ensure the button takes full width */
+    margin-top: 10px;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px; /* Optional: Add padding to improve button appearance */
+    background-color: var(--primary-dark); /* Optional: Add background color */
+    border-radius: 5px; /* Optional: Add border radius */
+    display: inline-block; /* Display as inline block to make them align horizontally */
+    text-align: center; /* Center align content inside each templateDiv */
+    margin: 0 10px; /* Add margin between each templateDiv */
+}
+.forMobile .productsButton:hover{
+    background-color:#404040;
+}

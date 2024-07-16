@@ -537,7 +537,6 @@ button[type=submit]:hover {
 
 .hero-section {
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   color:  var(--copy);
@@ -546,14 +545,11 @@ button[type=submit]:hover {
   position: relative;
 }
 
-.hero-section .hero-content {
+.hero-section {
   background-color:var(--primary);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 1600px;
-  min-height: 700px;
-  border-radius: 10px;
   color: white;
   font-weight: bold;
   border: 3px solid var(--border);
@@ -563,28 +559,49 @@ button[type=submit]:hover {
   text-align: center;
 }
 
-.hero-section .hero-content h1 {
-  font-size: 48px;
-  margin: 0;
+.hero-content h1 {
+  font-size: 3rem; /* Example font size */
 }
 
-.hero-section .hero-content p {
-  font-size: 24px;
+.hero-content p {
+  font-size: 1.5rem; /* Example font size */
+  margin-bottom: 1.5rem; /* Example spacing */
 }
 
-.hero-section .hero-content .btn {
+.hero-content .btn {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 20px;
-  background-color:  var(--primary-light);
-  color:  var(--copy);
+  background-color: #007bff; /* Example button styling */
+  color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
+
+.hero-section img{
+  height:auto;
+  width:50%;
+  max-height:512px;
+  max-width:256px;
+  padding:32px;
+}
+.hero-section .forMobile img{
+  padding:16px;
+  height:auto;
+  width:80%;
+}
+
+#aboutTemp3 img{
+  height:auto;
+  width:75%;
+}
+#servicesTemp3 img{
+  height:auto;
+  width:80%;
+}
+
 #aboutTemp3{
   background-image: url("/images/templateImages/IMG_0987.jpg");
-  min-height: 500px; 
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -597,12 +614,10 @@ button[type=submit]:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px var(--background);
-
   text-align: center;
-  position: relative;
 }
 .content-section {
-  padding: 60px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -615,15 +630,12 @@ button[type=submit]:hover {
 
 .service-card {
   background:  var(--copy-light);
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px var(--background);
   width: 30%;
 }
 #contactTemp3{
   background-image: url("/images/templateImages/IMG_0992.jpg");
-  min-height: 500px; 
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
