@@ -18,11 +18,6 @@ const firebaseConfig = {
 
 
 };
-var ipInfoDump;
-$.getJSON('https://ipinfo.io/', function(data) {
-  ipInfoDump =  data;
-  return ipInfoDump;
-});
 firebase.initializeApp(firebaseConfig);
 
 var messagesRef = firebase.database()
@@ -40,20 +35,14 @@ var phone =  document.getElementById('phone').value;
 var email =  document.getElementById('email').value;
 var msg =  document.getElementById("msg").value;
 var market = document.getElementById("market").value;
-var ipInfoIP = JSON.stringify(ipInfoDump.ip, null, 2);
-var ipInfoCity = JSON.stringify(ipInfoDump.city, null, 2);
-var ipInfoReg = JSON.stringify(ipInfoDump.region, null, 2);
-var ipInfoCont = JSON.stringify(ipInfoDump.country, null, 2);
-var ipInfoLocation = JSON.stringify(ipInfoDump.loc, null, 2);
-var ipInfoOrg = JSON.stringify(ipInfoDump.org, null, 2);
-var ipInfoTimezone = JSON.stringify(ipInfoDump.timezone, null, 2);
 
-saveMessage(name, phone, email, msg, market,ipInfoIP,ipInfoCity, ipInfoReg,ipInfoCont,ipInfoLocation,ipInfoOrg,ipInfoTimezone);
+
+saveMessage(name, phone, email, msg, market);
 document.getElementById('contactForm').reset();
 }
 
 // Save message to firebase
-function saveMessage(name, phone, email, msg, market,ipInfoIP,ipInfoCity, ipInfoReg,ipInfoCont,ipInfoLocation,ipInfoOrg,ipInfoTimezone) {
+function saveMessage(name, phone, email, msg, market) {
 var newMessageRef = messagesRef.push();
 newMessageRef.set({
  name: name,
@@ -61,12 +50,5 @@ newMessageRef.set({
  email: email,
  msg: msg,
  market:market,
- ipInfoIP:ipInfoIP,
- ipInfoCity:ipInfoCity, 
- ipInfoReg:ipInfoReg,
- ipInfoCont:ipInfoCont,
- ipInfoLocation:ipInfoLocation,
- ipInfoOrg:ipInfoOrg,
- ipInfoTimezone:ipInfoTimezone,
 });
 }

@@ -539,18 +539,17 @@ button[type=submit]:hover {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  color:  var(--copy);
+  color:  var(--background);
   text-align: center;
   padding-top:64px;
   position: relative;
 }
 
 .hero-section {
-  background-color:var(--primary);
+  background-color:var(--copy);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
   font-weight: bold;
   border: 3px solid var(--border);
   justify-content: center;
@@ -601,7 +600,7 @@ button[type=submit]:hover {
 }
 
 #aboutTemp3{
-  background-image: url("/images/templateImages/IMG_0987.jpg");
+  background-color:var(--primary-dark);  
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -635,8 +634,8 @@ button[type=submit]:hover {
   width: 30%;
 }
 #contactTemp3{
-  background-image: url("/images/templateImages/IMG_0992.jpg");
-  background-attachment: fixed;
+background-color:var(--primary-dark);  
+background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -659,7 +658,7 @@ button[type=submit]:hover {
 
 button[type=submit] {
   padding: 10px 20px;
-  background-color:  var(--primary-light);
+  background-color:  var(--background);
   color:  var(--copy);
   border: none;
   border-radius: 5px;
@@ -667,7 +666,7 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-  background-color:  var(--primary-light);
+  background-color:  var(--border);
 }
 
 .footer {
@@ -757,21 +756,3 @@ button[type=submit]:hover {
 }
 
 /* Button Styles */
-
-button[type=submit] {
-  width: 100%;
-  background-color: var(--primary);
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  color: var(--foreground);
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease; /* Added transition effect */
-}
-
-button[type=submit]:hover {
-  background-color: var(--primary-dark); /* Updated hover background color */
-}

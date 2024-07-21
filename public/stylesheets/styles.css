@@ -51,13 +51,10 @@ nav li{
     float: left;
 }
 body{
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-image: url("/images/background.png");
-
     min-height: 500px; 
-  
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -311,8 +308,14 @@ h1,h2,h3,h4,h5,p,small{
     max-width: 75%;
     height: auto;
 }
-#overview{
-    background-color: var(--primary-dark);
+.textbox{
+    background-color: var(--border);
+    padding-top:8px;
+    padding-bottom:8px;
+}
+#overview, #homepageAbout {
+    background-color: var(--border);
+    padding:25px;
 }
 
 select {
@@ -378,8 +381,6 @@ select {
     margin: 0 auto; /* Center align the image */
     height:auto;
     width:75%;
-    padding:32px;
-
 }
 
 .forMobile .productsButton {
@@ -399,3 +400,42 @@ select {
 .forMobile .productsButton:hover{
     background-color:#404040;
 }
+
+.header{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--primary-dark); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    font-size:48px;
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 75% }
+  }
+  @keyframes typingShort {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-dark); }
+  }
+  .headerShortText{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--primary-dark); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    font-size:48px;
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typingShort 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
